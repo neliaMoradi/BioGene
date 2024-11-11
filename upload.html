@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!--start page-Upload-->
+    <div class="wrapper__2">
+      <!--start menu-->
+      <div class="menu">
+        <nav>
+          <div class="items item__1__2">
+            <a href="./index.html">Main Page</a>
+          </div>
+          <div class="line"></div>
+          <div class="items">
+            <a href="./terms.html">Terms & Conditions</a>
+          </div>
+          <div class="line"></div>
+          <div class="items">
+            <a href="./team.html">My Team</a>
+          </div>
+          <div class="line"></div>
+          <div class="items">
+            <a href="#contact">Contact Us</a>
+          </div>
+          <div class="line"></div>
+          <div class="items item__5__2">
+            <a href="#">Upload Now</a>
+          </div>
+        </nav>
+      </div>
+
+      <!--end menu-->
+      <!--start upload-->
+      <div class="upload">
+        <div class="upload__left">
+          <h3>Accepted File Formats:</h3>
+          <p>
+            <span></span> BioGeneXplorer supports FASTA and TXT file formats for
+            uploads. Users should name files in a way that reflects their
+            analysis purpose to ease reference in output files.
+          </p>
+          <h3>Upload Buttons:</h3>
+          <p>
+            <span></span> Whole Genome Sequences (WGS): Upload WGS files under
+            this button for analysis against sample genes. <br />
+            <span style="background-color: #84061d"></span> Sample Genes: Upload
+            target gene sequences under this button to initiate analysis against
+            WGS data.
+          </p>
+          <h3>Setting Analysis Parameters:</h3>
+          <p>
+            <span></span> Two adjustable parameters, Coverage and Identity, are
+            available on the upload page for users to define analysis cutoffs.
+            These are initially set to 90% but can be adjusted as desired.
+          </p>
+        </div>
+        <div class="upload__right">
+          <form action="./waiting.html" method="post">
+            <label for="file-1">Genome:</label>
+            <input type="file" name="File-1" id="file-1" required />
+
+            <label for="file-2">Gene:</label>
+            <input type="file" name="File-2" id="file-2" required />
+
+            <label for="identity">Identity:</label>
+            <input
+              type="number"
+              name="Identity"
+              id="identity"
+              min="0"
+              max="100"
+              value="90"
+              required
+            />
+
+            <label for="coverage">Coverage:</label>
+            <input
+              type="number"
+              name="Coverage"
+              id="coverage"
+              min="0"
+              max="100"
+              value="90"
+              required
+            />
+
+            <input type="submit" value="Start" />
+          </form>
+        </div>
+      </div>
+      <!--end upload-->
+    </div>
+    <!--end page-Upload-->
+  </body>
+</html>
